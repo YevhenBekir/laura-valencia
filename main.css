@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-horizontal {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}

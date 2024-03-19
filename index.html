@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/fonts/inter-light.ttf" />
     <link rel="stylesheet" href="./main.css" />
+    <script src="./index.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Laura Valencia</title>
@@ -13,36 +14,42 @@
     <section id="first-section">
       <nav
         id="header-navbar"
-        class="w-full lg:w-1/3 mx-auto flex justify-between items-center my-3 text-lg text-black"
+        class="w-10/12 md:w-8/12 lg:w-1/3 mx-auto flex justify-between items-center my-3 text-xs lg:text-lg font-bold lg:font-medium"
       >
         <div
-          class="uppercase cursor-pointer transition-all hover:text-gray-600"
+          class="uppercase cursor-pointer transition-all duration-300 hover:text-gray-600"
+          onclick="scrollToSection('coworking-section')"
         >
           Trabajemos juntos
         </div>
 
         <div
-          class="uppercase cursor-pointer transition-all hover:text-gray-600"
+          class="uppercase cursor-pointer transition-all duration-300 hover:text-gray-600"
+          onclick="scrollToSection('about-me-section')"
         >
           Sobre mi
         </div>
 
         <div
-          class="uppercase cursor-pointer transition-all hover:text-gray-600"
+          class="uppercase cursor-pointer transition-all duration-300 hover:text-gray-600"
+          onclick="scrollToSection('contact-me-section')"
         >
           Contáctame
         </div>
       </nav>
 
       <div class="flex bg-[#120703] relative">
-        <div class="w-1/2">
+        <div class="w-full md:w-1/2">
           <img
             class="w-full object-cover"
             src="./assets/img/first-section/cropped-wallpaper.png"
             alt="wallpaper.png"
           />
         </div>
-        <div class="w-1/2 flex justify-start items-center relative">
+
+        <div
+          class="hidden md:w-1/2 md:flex md:justify-start md:items-center md:relative"
+        >
           <div class="w-8/12 relative ml-12">
             <img
               src="./assets/img/first-section/wallpaper-signature.png"
@@ -66,14 +73,16 @@
       </div>
     </section>
 
-    <section id="second-section">
-      <div class="py-20">
-        <div class="flex justify-center items-center uppercase text-4xl">
+    <section id="coworking-section">
+      <div class="py-16 md:py-20">
+        <div
+          class="flex justify-center items-center uppercase text-3xl md:text-4xl font-bold md:font-medium"
+        >
           Trabajemos juntos
         </div>
 
-        <div class="w-[85%] mt-14 mx-auto flex justify-between">
-          <div class="w-3/12 px-3">
+        <div class="md:w-[85%] mt-14 mx-auto sm:flex justify-between">
+          <div class="md:w-3/12 px-8 md:px-3">
             <img
               class="w-full h-full object-cover"
               src="./assets/img/second-section/first-img.png"
@@ -81,7 +90,7 @@
             />
           </div>
 
-          <div class="w-3/12 px-3">
+          <div class="md:w-3/12 px-8 md:px-3 mt-3 md:mt-0">
             <img
               class="w-full h-full object-cover"
               src="./assets/img/second-section/second-img.png"
@@ -89,7 +98,7 @@
             />
           </div>
 
-          <div class="w-3/12 px-3">
+          <div class="md:w-3/12 px-8 md:px-3 mt-3 md:mt-0">
             <img
               class="w-full h-full object-cover"
               src="./assets/img/second-section/third-img.png"
@@ -97,7 +106,7 @@
             />
           </div>
 
-          <div class="w-3/12 px-3">
+          <div class="md:w-3/12 px-8 md:px-3 mt-3 md:mt-0">
             <img
               class="w-full h-full object-cover"
               src="./assets/img/second-section/fourth-img.png"
@@ -108,32 +117,38 @@
       </div>
     </section>
 
-    <section id="third-section" class="bg-[#0c0a06]">
-      <div class="w-[85%] mx-auto flex justify-center items-center">
-        <div class="w-4/12 flex justify-end items-center">
+    <section id="about-me-section" class="bg-[#0c0a06]">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-center items-center px-4 md:px-0"
+      >
+        <div class="md:w-5/12 flex justify-center md:justify-end items-center">
           <img
-            class="max-w-[31rem] object-cover"
+            class="max-w-[31rem] w-full md:max-w-none md:w-auto object-cover"
             src="./assets/img/third-section/wallpaper-face.png"
             alt="wallpaper-face.png"
           />
         </div>
 
-        <div class="w-7/12 text-white py-16">
-          <div class="uppercase text-4xl">Sobre mi</div>
+        <div class="md:w-7/12 text-white py-12 md:py-0 md:pl-16">
+          <div class="uppercase text-4xl text-center md:text-left">
+            Sobre mi
+          </div>
 
-          <div class="max-w-[38rem] mt-12 text-2xl">
-            <div>
+          <div
+            class="max-w-[38rem] mt-12 text-lg md:text-2xl text-center md:text-left"
+          >
+            <div class="mb-5 md:mt-7">
               Veo el modelaje como una forma de arte, la cual me apasiona y hace
               feliz.
             </div>
 
-            <div class="mt-9">
+            <div class="mb-5 md:mt-7">
               En lo personal tengo la capacidad de adaptarme a cualquier
-              escenario, veo cada proyecto como una oportunidad de aprendizaj.
+              escenario, veo cada proyecto como una oportunidad de aprendizaje.
             </div>
 
-            <div class="mt-9">
-              Tengo 20 años, actualmente me encuentro erradicada en la ciudad de
+            <div>
+              Tengo 20 años, actualmente me encuentro radicada en la ciudad de
               Medellín.
             </div>
           </div>
@@ -142,8 +157,8 @@
     </section>
 
     <section id="fifth-section">
-      <div class="pt-20 w-[85%] mx-auto">
-        <div class="grid grid-cols-2 gap-6">
+      <div class="pt-20 md:w-[85%] mx-auto px-8 md:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
           <div>
             <img
               src="./assets/img/fourth-section/left/fr-first.png"
@@ -152,9 +167,9 @@
             />
           </div>
 
-          <div class="grid grid-cols-1 gap-6">
+          <div class="grid grid-cols-1 gap-3 md:gap-6">
             <div class="flex flex-col">
-              <div class="grid grid-cols-2 gap-6">
+              <div class="grid grid-cols-2 gap-3 md:gap-6">
                 <img
                   src="./assets/img/fourth-section/right/fr-first.png"
                   alt="fr-first.png"
@@ -178,10 +193,12 @@
           </div>
         </div>
 
-        <div class="mt-7 grid grid-cols-2 gap-6">
-          <div class="grid grid-cols-1 gap-6">
+        <div
+          class="mt-2 md:mt-7 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6"
+        >
+          <div class="grid grid-cols-1 gap-3 md:gap-6">
             <div class="flex flex-col">
-              <div class="grid grid-cols-2 gap-6">
+              <div class="grid grid-cols-2 gap-3 md:gap-6">
                 <img
                   src="./assets/img/fourth-section/left/sr-first.png"
                   alt="sr-first.png"
@@ -216,13 +233,17 @@
     </section>
 
     <section id="fifth-section">
-      <div class="py-20 w-[85%] mx-auto">
-        <div class="flex justify-center items-center uppercase text-4xl">
+      <div class="pt-16 md:py-16 py-0 md:py-20 md:w-[85%] mx-auto">
+        <div
+          class="flex justify-center items-center uppercase text-3xl font-bold md:text-4xl md:font-medium"
+        >
           Laura valencia
         </div>
 
-        <div class="mt-14 flex flex-wrap justify-center items-center">
-          <div class="w-full sm:w-1/2">
+        <div
+          class="mt-14 flex flex-wrap justify-center items-center px-8 md:px-0"
+        >
+          <div class="w-full md:w-1/2">
             <img
               src="./assets/img/fifth-section/model.png"
               class="w-full mx-auto"
@@ -230,14 +251,15 @@
             />
           </div>
 
-          <div class="w-1/2 px-24 py-28 text-3xl">
+          <!-- Model information on desktops -->
+          <div class="hidden md:block w-1/2 px-24 py-28 text-3xl">
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Peso</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Peso</div>
               <div class="w-1/2 uppercase text-black">57</div>
             </div>
 
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3 mt-7">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Altura</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Altura</div>
               <div class="w-1/2 uppercase text-black">
                 <span>1.76</span>
                 <span class="lowercase">cm</span>
@@ -245,33 +267,103 @@
             </div>
 
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3 mt-7">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Busto</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Busto</div>
               <div class="w-1/2 uppercase text-black">93</div>
             </div>
 
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3 mt-7">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Cintura</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Cintura</div>
               <div class="w-1/2 uppercase text-black">65</div>
             </div>
 
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3 mt-7">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Cadera</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Cadera</div>
               <div class="w-1/2 uppercase text-black">95</div>
             </div>
 
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3 mt-7">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Zapatos</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Zapatos</div>
               <div class="w-1/2 uppercase text-black">40</div>
             </div>
 
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3 mt-7">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Tallaje</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Tallaje</div>
               <div class="w-1/2 uppercase text-black">S</div>
             </div>
 
             <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3 mt-7">
-              <div class="w-1/2 uppercase text-[#7c7c7c]">Cabello</div>
+              <div class="w-1/2 uppercase font-bold text-[#7c7c7c]">Cabello</div>
               <div class="w-1/2 capitalize text-black">Rubio</div>
+            </div>
+          </div>
+
+          <!-- Model information on mobiles -->
+          <div class="block md:hidden w-full pt-12 text-xl">
+            <div class="flex justify-between">
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Peso</div>
+                  <div class="w-full uppercase text-black">57</div>
+                </div>
+              </div>
+
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Altura</div>
+                  <div class="w-full uppercase text-black">
+                    <span>1.76</span>
+                    <span class="lowercase">cm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-6">
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Busto</div>
+                  <div class="w-full uppercase text-black">93</div>
+                </div>
+              </div>
+
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Cintura</div>
+                  <div class="w-full uppercase text-black">65</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-6">
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Cadera</div>
+                  <div class="w-full uppercase text-black">95</div>
+                </div>
+              </div>
+
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Zapatos</div>
+                  <div class="w-full uppercase text-black">40</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between mt-6">
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Tallaje</div>
+                  <div class="w-full uppercase text-black">S</div>
+                </div>
+              </div>
+
+              <div class="w-1/2">
+                <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
+                  <div class="w-full uppercase font-bold text-[#7c7c7c]">Cabello</div>
+                  <div class="w-full capitalize text-black">Rubio</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -279,7 +371,7 @@
     </section>
 
     <section id="sixth-section">
-      <div class="w-[85%] mx-auto pt-26">
+      <div class="md:w-[85%] mx-auto pt-16 md:pt-26">
         <img
           src="./assets/img/sixth-section/wallpaper.png"
           class="w-full"
@@ -291,15 +383,15 @@
     <section id="seventh-section">
       <div class="pt-16">
         <div
-          class="w-7/12 mx-auto uppercase text-3xl tracking-wider text-center"
+          class="w-11/12 md:w-7/12 mx-auto uppercase text-md md:text-3xl md:tracking-wider text-center font-bold md:font-medium"
         >
           Celebro mi identidad como una mujer de color y me alineo con las
           marcas que hacen lo mismo.
         </div>
 
-        <div class="w-[85%] mx-auto mt-16">
-          <div class="grid grid-cols-2 gap-6">
-            <div class="grid grid-cols-1 gap-6">
+        <div class="md:w-[85%] mx-auto mt-16 px-8 md:px-0">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
+            <div class="grid grid-cols-1 gap-2 md:gap-6">
               <img
                 src="./assets/img/seventh-section/left/fr-first.png"
                 alt="fr-first.png"
@@ -308,11 +400,25 @@
               <img
                 src="./assets/img/seventh-section/left/sr-first.png"
                 alt="fr-first.png"
-                class="w-full h-full"
+                class="hidden md:block w-full h-full"
               />
+
+              <div class="grid grid-cols-2 gap-2 md:hidden">
+                <img
+                  src="./assets/img/seventh-section/left/sr-first.png"
+                  alt="fr-first.png"
+                  class="md:hidden w-full h-full"
+                />
+
+                <img
+                  src="./assets/img/seventh-section/right/sr-first.png"
+                  alt="fr-first.png"
+                  class="md:hidden w-full h-full"
+                />
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 gap-2 md:gap-6">
               <img
                 src="./assets/img/seventh-section/right/fr-first.png"
                 alt="fr-first.png"
@@ -321,7 +427,7 @@
               <img
                 src="./assets/img/seventh-section/right/sr-first.png"
                 alt="fr-first.png"
-                class="w-full h-full"
+                class="hidden md:block w-full h-full"
               />
 
               <img
@@ -332,7 +438,7 @@
             </div>
           </div>
 
-          <div class="mt-7 grid grid-cols-2 gap-6">
+          <div class="mt-2 md:mt-7 grid grid-cols-2 gap-2 md:gap-6">
             <div>
               <img
                 src="./assets/img/seventh-section/left/tr-first.png"
@@ -341,7 +447,7 @@
               />
             </div>
 
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-2 gap-2 md:gap-6">
               <div>
                 <img
                   src="./assets/img/seventh-section/right/fourr-first.png"
@@ -359,7 +465,7 @@
             </div>
           </div>
 
-          <div class="mt-7 grid grid-cols-1 gap-6">
+          <div class="mt-2 md:mt-7 grid grid-cols-1 gap-2 md:gap-6">
             <img
               src="./assets/img/seventh-section/wallpaper.png"
               alt="Your Image"
@@ -371,7 +477,7 @@
     </section>
 
     <section id="signature-section">
-      <div class="w-6/12 mx-auto py-20">
+      <div class="w-7/12 mx-auto py-14 md:py-20">
         <img
           src="./assets/img/signature.png"
           class="w-full"
@@ -380,68 +486,68 @@
       </div>
     </section>
 
-    <footer id="footer-section" class="bg-[#000] text-white">
-      <div class="w-3/12 mx-auto pt-10 pb-8">
-        <div class="uppercase text-3xl text-center">Contáctame</div>
-
-        <div class="flex justify-center items-center mt-8">
-          <div>
-            <img
-              src="./assets/img/instagram.png"
-              class="max-w-[44px]"
-              alt="instagram.png"
-            />
-          </div>
-
-          <div class="text-md ml-3">
-            <a
-              href="https://www.instagram.com/im_lalav22?igsh=
-							MXkxcDk0dm1tN3c2Mw%3D%3D&utm_source=qr"
-              target="_blank"
-              class="transition-colors duration-300 hover:text-gray-300 hover:underline"
-              >https://www.instagram.com/im_lalav22?igsh=
-              MXkxcDk0dm1tN3c2Mw%3D%3D&utm_source=qr</a
-            >
-          </div>
+    <footer id="contact-me-section" class="bg-black text-white">
+      <div class="container mx-auto px-8 md:px-0 py-8">
+        <div class="uppercase text-2xl md:text-3xl mb-8 text-center">
+          Contáctame
         </div>
 
-        <div class="flex items-center mt-6">
-          <div>
-            <img
-              src="./assets/img/email.png"
-              class="max-w-[44px]"
-              alt="email.png"
-            />
-          </div>
-          <div class="text-md ml-3">
-            <a
-              href="mailto:andrelaura374@gmail.com"
-              class="transition-colors duration-300 hover:text-gray-300 hover:underline"
-              >andrelaura374@gmail.com</a
-            >
-          </div>
-        </div>
+        <div class="flex justify-center">
+          <div class="w-4/12"></div>
 
-        <div class="flex items-center mt-6">
-          <div>
-            <img
-              src="./assets/img/phone.png"
-              class="max-w-[44px]"
-              alt="phone.png"
-            />
-          </div>
-          <div class="text-md ml-3">
-            <div>
-              <a
-                href="tel:+573202631162"
-                class="transition-colors duration-300 hover:text-gray-300 hover:underline"
-                >+57 320 263 1162</a
-              >
+          <div class="w-4/12 text-center md:text-left">
+            <div class="flex flex-col items-start lg:ml-12">
+              <div class="flex items-center mb-4">
+                <img
+                  src="./assets/img/instagram.png"
+                  class="w-[32px] md:w-[42px] mr-3"
+                  alt="instagram.png"
+                />
+                <a
+                  href="https://www.instagram.com/im_lalav22?igsh=..."
+                  target="_blank"
+                  class="hover:text-gray-300 hover:underline"
+                >
+                  https://www.instagram.com/im_lalav22
+                </a>
+              </div>
+
+              <div class="flex items-center mb-4">
+                <img
+                  src="./assets/img/email.png"
+                  class="w-[32px] md:w-[42px] mr-3"
+                  alt="email.png"
+                />
+                <a
+                  href="mailto:andrelaura374@gmail.com"
+                  class="hover:text-gray-300 hover:underline"
+                >
+                  andrelaura374@gmail.com
+                </a>
+              </div>
+
+              <div class="flex items-center">
+                <img
+                  src="./assets/img/phone.png"
+                  class="w-[32px] md:w-[42px] mr-3"
+                  alt="phone.png"
+                />
+                <a
+                  href="tel:+573202631162"
+                  class="hover:text-gray-300 hover:underline"
+                >
+                  +573202631162
+                </a>
+              </div>
             </div>
           </div>
+
+          <div class="w-4/12"></div>
         </div>
 
-        <div class="uppercase text-xl text-center mt-8">Trabajemos juntos</div>
+        <div class="uppercase text-lg md:text-xl mt-8 text-center">
+          Trabajemos juntos
+        </div>
       </div>
     </footer>
   </body>

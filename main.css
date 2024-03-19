@@ -61,3 +61,23 @@ body {
 #sixth-section {
   transition-property: opacity, transform;
 }
+
+#ss-left-fr-first {
+  transition-property: opacity, transform;
+}
+
+#ss-right-sr-first {
+  transition-property: opacity, transform;
+}
+
+#ss-left-tr-first {
+  transition-property: opacity, transform;
+}
+
+#ss-right-fourr-first {
+  transition-property: opacity, transform;
+}
+
+#ss-right-fourr-second {
+  transition-property: opacity, transform;
+}

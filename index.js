@@ -150,4 +150,101 @@ document.addEventListener("DOMContentLoaded", () => {
       sixthSection.classList.remove("opacity-0", "translate-y-10");
     }
   });
+
+  // #ss-left-fr-first - SHOW LISTENER
+  let ssLeftFrFirstImage = document.getElementById("ss-left-fr-first");
+  let ssLeftFrFirstImageSectionPosition =
+    ssLeftFrFirstImage.getBoundingClientRect().top;
+  let ssLeftFrFirstImageScreenPosition = window.innerHeight / 2.3;
+
+  window.addEventListener("scroll", () => {
+    let ssLeftFrFirstImageScrollPosition =
+      window.scrollY + ssLeftFrFirstImageScreenPosition;
+
+    if (ssLeftFrFirstImageSectionPosition < ssLeftFrFirstImageScrollPosition) {
+      ssLeftFrFirstImage.classList.add("opacity-100", "translate-x-0");
+      ssLeftFrFirstImage.classList.remove("opacity-0", "translate-x-[-30px]");
+    }
+  });
+
+  // #ss-right-sr-first - SHOW LISTENER
+  let ssRightSrFirstImage = document.getElementById("ss-right-sr-first");
+  let ssRightSrFirstImageSectionPosition =
+    ssRightSrFirstImage.getBoundingClientRect().top;
+  let ssRightSrFirstImageScreenPosition = window.innerHeight / 2.3;
+
+  window.addEventListener("scroll", () => {
+    let ssRightSrFirstImageScrollPosition =
+      window.scrollY + ssRightSrFirstImageScreenPosition;
+
+    if (
+      ssRightSrFirstImageSectionPosition + 200 <
+      ssRightSrFirstImageScrollPosition
+    ) {
+      ssRightSrFirstImage.classList.add("opacity-100", "translate-x-0");
+      ssRightSrFirstImage.classList.remove("opacity-0", "translate-x-[30px]");
+    }
+  });
+
+  // #ss-left-tr-first - SHOW LISTENER
+  let ssLeftTrFirstImage = document.getElementById("ss-left-tr-first");
+  let ssLeftTrFirstImageSectionPosition =
+    ssLeftTrFirstImage.getBoundingClientRect().top;
+  let ssLeftTrFirstImageScreenPosition = window.innerHeight / 2.3;
+
+  window.addEventListener("scroll", () => {
+    let ssLeftTrFirstImageScrollPosition =
+      window.scrollY + ssLeftTrFirstImageScreenPosition;
+
+    if (ssLeftTrFirstImageSectionPosition < ssLeftTrFirstImageScrollPosition) {
+      ssLeftTrFirstImage.classList.add("opacity-100", "translate-y-0");
+      ssLeftTrFirstImage.classList.remove("opacity-0", "translate-y-[30px]");
+    }
+  });
+
+  // #ss-right-fourr-first - SHOW LISTENER
+  let ssRightFourrFirstImage = document.getElementById("ss-right-fourr-first");
+  let ssRightFourrFirstImageSectionPosition =
+    ssRightFourrFirstImage.getBoundingClientRect().top;
+  let ssRightFourrFirstImageScreenPosition = window.innerHeight / 2.3;
+
+  window.addEventListener("scroll", () => {
+    let ssRightFourrFirstImageScrollPosition =
+      window.scrollY + ssRightFourrFirstImageScreenPosition;
+
+    if (
+      ssRightFourrFirstImageSectionPosition <
+      ssRightFourrFirstImageScrollPosition
+    ) {
+      ssRightFourrFirstImage.classList.add("opacity-100", "translate-y-0");
+      ssRightFourrFirstImage.classList.remove(
+        "opacity-0",
+        "translate-y-[30px]"
+      );
+    }
+  });
+
+  // #ss-right-fourr-second - SHOW LISTENER
+  let ssRightFourrSecondImage = document.getElementById(
+    "ss-right-fourr-second"
+  );
+  let ssRightFourrSecondImageSectionPosition =
+    ssRightFourrSecondImage.getBoundingClientRect().top;
+  let ssRightFourrSecondImageScreenPosition = window.innerHeight / 2.3;
+
+  window.addEventListener("scroll", () => {
+    let ssRightFourrSecondImageScrollPosition =
+      window.scrollY + ssRightFourrSecondImageScreenPosition;
+
+    if (
+      ssRightFourrSecondImageSectionPosition <
+      ssRightFourrSecondImageScrollPosition
+    ) {
+      ssRightFourrSecondImage.classList.add("opacity-100", "translate-y-0");
+      ssRightFourrSecondImage.classList.remove(
+        "opacity-0",
+        "translate-y-[30px]"
+      );
+    }
+  });
 });

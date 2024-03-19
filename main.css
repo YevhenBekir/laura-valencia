@@ -13,3 +13,51 @@ html {
 body {
   font-family: "Inter", sans-serif;
 }
+
+.line-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.line-animation::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.line-animation:hover::before {
+  width: 100%;
+}
+
+.slide-image {
+  transition-property: opacity, transform;
+}
+
+#info-desktop-block {
+  transition-property: opacity, transform;
+}
+
+#fs-right-fr-first {
+  transition-property: opacity, transform;
+}
+
+#fs-right-sr-first {
+  transition-property: opacity, transform;
+}
+
+#fs-left-sr-first {
+  transition-property: opacity, transform;
+}
+
+#fs-left-horizontal {
+  transition-property: opacity, transform;
+}
+
+#sixth-section {
+  transition-property: opacity, transform;
+}

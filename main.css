@@ -81,3 +81,24 @@ body {
 #ss-right-fourr-second {
   transition-property: opacity, transform;
 }
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    transparent 0%,
+    transparent 30%,
+    rgba(255, 255, 255, 0.13) 51%,
+    rgba(255, 255, 255, 0.13) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overflow-hidden:hover .gradient-overlay {
+  opacity: 1;
+}

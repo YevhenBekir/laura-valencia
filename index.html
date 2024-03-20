@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="./assets/fonts/inter-light.ttf" />
     <link rel="stylesheet" href="./main.css" />
-    <script src="./index.js"></script>
 
+    <script src="./index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" type="image/x-ico" href="./assets/favicon.ico" />
     <title>Laura Valencia</title>
   </head>
   <body>
@@ -87,7 +90,8 @@
             class="md:w-3/12 px-8 md:px-3 relative overflow-hidden bg-cover bg-no-repeat"
           >
             <img
-              class="slide-image w-full h-full object-cover opacity-0 transform translate-y-32 transition-opacity duration-700 ease-in-out"
+              id="slide-image-first"
+              class="w-full h-full object-cover opacity-0 transform translate-x-[-30px] transition-opacity duration-700 ease-in-out"
               src="./assets/img/second-section/first-img.png"
               alt="first-image.png"
             />
@@ -102,7 +106,8 @@
             class="md:w-3/12 px-8 md:px-3 mt-3 md:mt-0 relative overflow-hidden bg-cover bg-no-repeat"
           >
             <img
-              class="slide-image w-full h-full object-cover opacity-0 transform translate-y-32 transition-opacity duration-700 ease-in-out"
+              id="slide-image-second"
+              class="w-full h-full object-cover opacity-0 transform translate-x-[-30px] transition-opacity duration-700 ease-in-out"
               src="./assets/img/second-section/second-img.png"
               alt="second-image.png"
             />
@@ -117,7 +122,8 @@
             class="md:w-3/12 px-8 md:px-3 mt-3 md:mt-0 relative overflow-hidden bg-cover bg-no-repeat"
           >
             <img
-              class="slide-image w-full h-full object-cover opacity-0 transform translate-y-32 transition-opacity duration-700 ease-in-out"
+              id="slide-image-third"
+              class="w-full h-full object-cover opacity-0 transform translate-x-[30px] transition-opacity duration-700 ease-in-out"
               src="./assets/img/second-section/third-img.png"
               alt="third-image.png"
             />
@@ -132,7 +138,8 @@
             class="md:w-3/12 px-8 md:px-3 mt-3 md:mt-0 relative overflow-hidden bg-cover bg-no-repeat"
           >
             <img
-              class="slide-image w-full h-full object-cover opacity-0 transform translate-y-32 transition-opacity duration-700 ease-in-out"
+              id="slide-image-fourth"
+              class="w-full h-full object-cover opacity-0 transform translate-x-[30px] transition-opacity duration-700 ease-in-out"
               src="./assets/img/second-section/fourth-img.png"
               alt="fourth-image.png"
             />
@@ -366,7 +373,10 @@
           </div>
 
           <!-- Model information on mobiles -->
-          <div class="block md:hidden w-full pt-12 text-xl">
+          <div
+            id="info-mobile-block"
+            class="block md:hidden w-full pt-12 text-xl opacity-0 transform translate-y-[70px] transition-opacity duration-1000 ease-in-out"
+          >
             <div class="flex justify-between">
               <div class="w-1/2">
                 <div class="flex bg-gradient-to-r from-[#ebebeb] to-white p-3">
@@ -486,7 +496,7 @@
 
     <section
       id="sixth-section"
-      class="opacity-0 transform translate-y-[10px] transition-opacity duration-500 ease-in-out"
+      class="opacity-0 transform translate-y-[50px] transition-opacity duration-500 ease-in-out"
     >
       <div class="md:w-[85%] mx-auto pt-16 md:pt-26 md:px-0">
         <img
@@ -604,13 +614,15 @@
             <div class="grid grid-cols-2 gap-2">
               <img
                 src="./assets/img/seventh-section/left/sr-first.png"
-                alt="fr-first.png"
-                class="w-full h-full"
+                id="ss-left-sr-first-mobile"
+                alt="sr-first.png"
+                class="w-full h-full opacity-0 transform translate-x-[-30px] transition-opacity duration-700 ease-in-out"
               />
               <img
                 src="./assets/img/seventh-section/right/sr-first.png"
-                alt="fr-first.png"
-                class="w-full h-full"
+                id="ss-left-sr-right-mobile"
+                alt="sr-first.png"
+                class="w-full h-full opacity-0 transform translate-x-[30px] transition-opacity duration-700 ease-in-out"
               />
             </div>
 
@@ -635,8 +647,9 @@
             <div>
               <img
                 src="./assets/img/seventh-section/left/tr-first.png"
-                alt="Your Image"
-                class="w-full h-full"
+                id="ss-left-tr-first-mobile"
+                alt="tr-first.png"
+                class="w-full h-full opacity-0 transform translate-x-[-30px] transition-opacity duration-700 ease-in-out"
               />
             </div>
 
@@ -644,16 +657,18 @@
               <div>
                 <img
                   src="./assets/img/seventh-section/right/fourr-first.png"
-                  alt="Your Image"
-                  class="w-full h-full"
+                  id="ss-right-fourr-first-mobile"
+                  alt="fourr-first.png"
+                  class="w-full h-full opacity-0 transform translate-y-[50px] transition-opacity duration-700 ease-in-out"
                 />
               </div>
 
               <div>
                 <img
                   src="./assets/img/seventh-section/right/fourr-second.png"
-                  alt="Your Image"
-                  class="w-full h-full"
+                  id="ss-right-fourr-second-mobile"
+                  alt="fourr-second.png"
+                  class="w-full h-full opacity-0 transform translate-x-[30px] transition-opacity duration-700 ease-in-out"
                 />
               </div>
             </div>
@@ -662,7 +677,7 @@
           <div class="mt-2 grid grid-cols-1 gap-2">
             <img
               src="./assets/img/seventh-section/wallpaper.png"
-              alt="Your Image"
+              alt="wallpaper.png"
               class="w-full h-full"
             />
           </div>

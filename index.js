@@ -46,26 +46,31 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // SHOW LISTENERS
-  // .slide-image's - SHOW LISTENER
-  let images = document.querySelectorAll(".slide-image");
-  let imageShowDelay = 0;
-
-  function checkSlide() {
-    images.forEach(function (image) {
-      let screenImagePosition = window.innerHeight / 2.3;
-      let imageScrollPosition = window.scrollY + screenImagePosition;
-
-      if (screenImagePosition < imageScrollPosition) {
-        setTimeout(function () {
-          image.classList.add("opacity-100", "translate-y-0");
-          image.classList.remove("opacity-0", "translate-y-32");
-        }, imageShowDelay);
-        imageShowDelay += 120;
-      }
-    });
-  }
-  window.addEventListener("scroll", checkSlide);
   window.addEventListener("scroll", () => {
+    animateOnScroll(
+      document.getElementById("slide-image-first"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[-30px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("slide-image-second"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[-30px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("slide-image-third"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[30px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("slide-image-fourth"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[30px]"]
+    );
+
     animateOnScroll(
       document.getElementById("fs-right-fr-first"),
       ["opacity-100", "translate-y-0"],
@@ -97,9 +102,15 @@ window.addEventListener("DOMContentLoaded", () => {
     );
 
     animateOnScroll(
+      document.getElementById("info-mobile-block"),
+      ["opacity-100", "translate-y-0"],
+      ["opacity-0", "translate-y-[70px]"]
+    );
+
+    animateOnScroll(
       document.getElementById("sixth-section"),
       ["opacity-100", "translate-y-0"],
-      ["opacity-0", "translate-y-10"]
+      ["opacity-0", "translate-y-[50px]"]
     );
 
     animateOnScroll(
@@ -142,6 +153,36 @@ window.addEventListener("DOMContentLoaded", () => {
       document.getElementById("ss-right-fourr-second"),
       ["opacity-100", "translate-y-0"],
       ["opacity-0", "translate-y-[30px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("ss-left-sr-first-mobile"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[30px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("ss-left-sr-right-mobile"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[-30px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("ss-left-tr-first-mobile"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[-30px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("ss-right-fourr-first-mobile"),
+      ["opacity-100", "translate-y-0"],
+      ["opacity-0", "translate-y-[50px]"]
+    );
+
+    animateOnScroll(
+      document.getElementById("ss-right-fourr-second-mobile"),
+      ["opacity-100", "translate-x-0"],
+      ["opacity-0", "translate-x-[30px]"]
     );
   });
 });
